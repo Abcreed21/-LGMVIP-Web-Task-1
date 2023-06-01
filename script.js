@@ -12,6 +12,10 @@ function addTodo() {
   let todoItem = document.createElement("li");
   todoItem.innerText = todoText;
 
+  todoItem.onclick = function () {
+    todoItem.classList.toggle("done");
+  };
+
   let deleteButton = document.createElement("button");
   deleteButton.innerText = "Delete";
   deleteButton.onclick = function () {
